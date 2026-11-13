@@ -1,0 +1,4 @@
+rank,model,accuracy,precision,recall,f1_score,roc_auc,train_time_seconds,predict_time_seconds
+1,Random Forest,0.995539,0.998746,0.990797,0.994756,0.998133,50.248,0.629
+2,Decision Tree,0.99539,0.998496,0.990698,0.994582,0.996869,2.208,0.018
+3,Logistic Regression,0.994116,0.998843,0.987365,0.993071,0.996903,1.933,0.07

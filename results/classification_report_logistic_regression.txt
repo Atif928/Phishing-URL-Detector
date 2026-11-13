@@ -1,0 +1,11 @@
+Model: Logistic Regression
+Evaluated on the held-out test set: 47,073 URLs
+==============================================================
+              precision    recall  f1-score   support
+
+  Legitimate     0.9907    0.9991    0.9949     26970
+    Phishing     0.9988    0.9874    0.9931     20103
+
+    accuracy                         0.9941     47073
+   macro avg     0.9948    0.9933    0.9940     47073
+weighted avg     0.9942    0.9941    0.9941     47073

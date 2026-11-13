@@ -1,0 +1,11 @@
+Model: Decision Tree
+Evaluated on the held-out test set: 47,073 URLs
+==============================================================
+              precision    recall  f1-score   support
+
+  Legitimate     0.9931    0.9989    0.9960     26970
+    Phishing     0.9985    0.9907    0.9946     20103
+
+    accuracy                         0.9954     47073
+   macro avg     0.9958    0.9948    0.9953     47073
+weighted avg     0.9954    0.9954    0.9954     47073

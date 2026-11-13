@@ -1,0 +1,11 @@
+Model: Random Forest
+Evaluated on the held-out test set: 47,073 URLs
+==============================================================
+              precision    recall  f1-score   support
+
+  Legitimate     0.9932    0.9991    0.9961     26970
+    Phishing     0.9987    0.9908    0.9948     20103
+
+    accuracy                         0.9955     47073
+   macro avg     0.9960    0.9949    0.9954     47073
+weighted avg     0.9956    0.9955    0.9955     47073

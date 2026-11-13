@@ -1,0 +1,182 @@
+{
+  "model_name": "Random Forest",
+  "model_file": "models\\phishing_detector.joblib",
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "query_length",
+    "num_dots",
+    "num_hyphens",
+    "num_underscores",
+    "num_slashes",
+    "num_question_marks",
+    "num_equal_signs",
+    "num_at_symbols",
+    "num_ampersands",
+    "num_special_chars",
+    "num_digits",
+    "digit_ratio",
+    "num_letters",
+    "letter_ratio",
+    "num_subdomains",
+    "num_params",
+    "path_depth",
+    "tld_length",
+    "has_https",
+    "has_ip_address",
+    "has_suspicious_keyword",
+    "num_suspicious_keywords",
+    "has_url_shortener",
+    "has_brand_term",
+    "hostname_is_long",
+    "has_unusual_port",
+    "has_port",
+    "has_punycode",
+    "suspicious_tld",
+    "num_percent_encoded",
+    "has_hex_encoding",
+    "has_double_slash_in_path",
+    "has_obfuscation",
+    "is_long_url",
+    "hostname_hyphen_count"
+  ],
+  "feature_count": 38,
+  "feature_schema_hash": "7f8f441640b83193",
+  "label_mapping": {
+    "0": "Legitimate",
+    "1": "Phishing"
+  },
+  "positive_class": "Phishing",
+  "trained_at": "2026-11-12T12:53:17+00:00",
+  "random_state": 42,
+  "test_size": 0.2,
+  "training_rows": 188289,
+  "test_rows": 47073,
+  "train_class_distribution": {
+    "total": 188289,
+    "legitimate": 107880,
+    "phishing": 80409,
+    "phishing_ratio": 0.4271
+  },
+  "test_class_distribution": {
+    "total": 47073,
+    "legitimate": 26970,
+    "phishing": 20103,
+    "phishing_ratio": 0.4271
+  },
+  "metrics": {
+    "accuracy": 0.995539,
+    "precision": 0.998746,
+    "recall": 0.990797,
+    "f1_score": 0.994756,
+    "roc_auc": 0.998133,
+    "true_negatives": 26945,
+    "false_positives": 25,
+    "false_negatives": 185,
+    "true_positives": 19918
+  },
+  "confusion_matrix": [
+    [
+      26945,
+      25
+    ],
+    [
+      185,
+      19918
+    ]
+  ],
+  "selection_rule": "Ranked by F1-score (primary), then recall (false negatives are costly in security), then ROC-AUC. Accuracy alone is not used.",
+  "comparison": [
+    {
+      "rank": 1,
+      "model": "Random Forest",
+      "accuracy": 0.995539,
+      "precision": 0.998746,
+      "recall": 0.990797,
+      "f1_score": 0.994756,
+      "roc_auc": 0.998133,
+      "train_accuracy": 0.996367,
+      "train_time_seconds": 50.248,
+      "predict_time_seconds": 0.629,
+      "true_negatives": 26945,
+      "false_positives": 25,
+      "false_negatives": 185,
+      "true_positives": 19918,
+      "confusion_matrix": [
+        [
+          26945,
+          25
+        ],
+        [
+          185,
+          19918
+        ]
+      ],
+      "file": "models\\random_forest.joblib"
+    },
+    {
+      "rank": 2,
+      "model": "Decision Tree",
+      "accuracy": 0.99539,
+      "precision": 0.998496,
+      "recall": 0.990698,
+      "f1_score": 0.994582,
+      "roc_auc": 0.996869,
+      "train_accuracy": 0.996134,
+      "train_time_seconds": 2.208,
+      "predict_time_seconds": 0.018,
+      "true_negatives": 26940,
+      "false_positives": 30,
+      "false_negatives": 187,
+      "true_positives": 19916,
+      "confusion_matrix": [
+        [
+          26940,
+          30
+        ],
+        [
+          187,
+          19916
+        ]
+      ],
+      "file": "models\\decision_tree.joblib"
+    },
+    {
+      "rank": 3,
+      "model": "Logistic Regression",
+      "accuracy": 0.994116,
+      "precision": 0.998843,
+      "recall": 0.987365,
+      "f1_score": 0.993071,
+      "roc_auc": 0.996903,
+      "train_accuracy": 0.994073,
+      "train_time_seconds": 1.933,
+      "predict_time_seconds": 0.07,
+      "true_negatives": 26947,
+      "false_positives": 23,
+      "false_negatives": 254,
+      "true_positives": 19849,
+      "confusion_matrix": [
+        [
+          26947,
+          23
+        ],
+        [
+          254,
+          19849
+        ]
+      ],
+      "file": "models\\logistic_regression.joblib"
+    }
+  ],
+  "versions": {
+    "python": "3.13.17",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.1.0"
+  },
+  "dataset": {
+    "path": "data/raw/urls.csv",
+    "source": "PhiUSIIL Phishing URL Dataset (UCI ML Repository, ID 967)"
+  }
+}
